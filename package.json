@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/PhantasticHenry/server/issues"
   },
-  "homepage": "https://github.com/PhantasticHenry/server#readme"
+  "homepage": "https://github.com/PhantasticHenry/server#readme",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.12"
+  }
 }
