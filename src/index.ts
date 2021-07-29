@@ -5,7 +5,6 @@ import { AppRouter } from './AppRouter';
 import './controllers/LoginController';
 
 const app = express();
-
 app.use(express.urlencoded());
 app.use(cookieSession({ keys: ['string'] }));
 app.use(router);

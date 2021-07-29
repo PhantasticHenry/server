@@ -4,7 +4,7 @@ exports.Methods = void 0;
 var Methods;
 (function (Methods) {
     Methods["get"] = "get";
-    Methods["post"] = "patch";
+    Methods["post"] = "post";
     Methods["patch"] = "patch";
     Methods["del"] = "delete";
     Methods["put"] = "put";

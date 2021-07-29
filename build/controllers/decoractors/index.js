@@ -13,3 +13,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./controllers"), exports);
 __exportStar(require("./routes"), exports);
 __exportStar(require("./use"), exports);
+__exportStar(require("./bodyValidator"), exports);

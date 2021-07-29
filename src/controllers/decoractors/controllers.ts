@@ -13,7 +13,7 @@ function bodyValidators(keys: string): RequestHandler {
 
 		for (let key of keys) {
 			if (!req.body[key]) {
-				res.status(422).send('Invalid request');
+				res.status(422).send(`Missing property ${key}`);
 				return;
 			}
 		}
@@ -52,7 +52,6 @@ export function controller(routePrefex: string) {
 				) || [];
 
 			const validator = bodyValidators(requiredBodyProps);
-
 			if (path) {
 				router[method](
 					`${routePrefex}${path}`,
