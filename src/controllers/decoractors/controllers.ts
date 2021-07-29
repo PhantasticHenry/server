@@ -19,9 +19,15 @@ export function controller(routePrefex: string) {
 				target.prototype,
 				key
 			);
+			const middlewares =
+				Reflect.getMetadata(MetadataKeys.middleware, target, key) || [];
 
 			if (path) {
-				router[method](`${routePrefex}${path}`, routeHandler);
+				router[method](
+					`${routePrefex}${path}`,
+					...middlewares,
+					routeHandler
+				);
 			}
 		}
 	};
